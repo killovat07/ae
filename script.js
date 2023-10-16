@@ -160,7 +160,7 @@ let mouseWheelCount = 0;
 
 if (document.querySelector('.wrapper').classList.contains('home-page')) {
   //Init controller
-  // var controller = new ScrollMagic.Controller();
+  var controller = new ScrollMagic.Controller();
 
   // var scene = new ScrollMagic.Scene({
   //   triggerElement: '.animation-indicator',
