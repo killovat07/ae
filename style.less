@@ -678,50 +678,40 @@ main {
   }
 }
 .main-inner {
-  justify-content: center;
-  height: calc(300vh - 180px);
+  justify-content: flex-start;
+  height: 300vh;
   display: flex;
   flex-direction: column;
   padding-bottom: 0;
+
   & > div {
-    height: calc(100vh - 60px);
+    height: 100vh;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     &:nth-child(2) {
-      height: calc(200vh - 120px);
+      height: 200vh;
     }
   }
 }
 
-// .main-inner {
-//   flex: 1;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
-//   padding-bottom: 40px;
-//   .is-animate & {
-//     min-height: 350px;
-//   }
-// }
 .offers-block {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
-  height: 100%;
-  padding-bottom: 40px;
+  height: -webkit-fill-available;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   text-align: center;
   z-index: 1;
-  .is-animate & {
-    display: none;
-  }
+  transition: var(--transition);
 }
 .offers-inner {
   margin: 0 auto;
@@ -800,7 +790,7 @@ main {
 
 .overlay-blue {
   position: absolute;
-  top: -80px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -813,8 +803,8 @@ main {
 
 .animation-indicator {
   position: absolute;
-  top: 0vh;
-  height: calc(300vh - 120px);
+  top: 0;
+  height: 300vh;
   margin: auto;
   left: 0;
   right: 0;
@@ -846,6 +836,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
+  margin-top: 60px;
   // left: 0;
   // right: 0;
   transition: var(--transition);
@@ -863,9 +854,7 @@ main {
 .main-svg tspan {
   fill: var(--primary);
 }
-// .main-svg g {
-//     background: url(img/donna.png) no-repeat center top / cover;
-// }
+
 .main-svg text {
   // animation: rotate 25s linear infinite;
   transform-origin: 250px 250px;
@@ -873,14 +862,20 @@ main {
   will-change: transform;
   transition: var(--transition);
 }
-
+.main-svg rect {
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
 .main-svg .rect1 {
-  transition: all 0.25s linear;
-  filter: sepia(100%) hue-rotate(190deg) saturate(100%);
+  opacity: 1;
 }
-.main-svg .rect1.is-active {
-  filter: sepia(100%) hue-rotate(190deg) saturate(800%) contrast(90%) brightness(140%);
+.main-svg.is-active .rect1 {
+  opacity: 0;
 }
+.main-svg.is-active .rect2 {
+  opacity: 1;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0);
@@ -935,7 +930,8 @@ main {
     bottom: 0;
     margin: auto;
     height: 60px;
-    transition: 1s linear;
+    // transition: 1s linear;
+    will-change: transform;
     &.vector-1 {
       top: -290px;
       transform: translateX(100%);
@@ -1327,7 +1323,7 @@ form .select-value {
 }
 @media screen and (min-width: 768px) {
   .animation-indicator {
-    height: calc(300vh - 160px);
+    height: 300vh;
   }
   // .content-block {
   //   margin: 460px auto 0;
@@ -1344,14 +1340,14 @@ form .select-value {
 
 @media screen and (min-width: 980px) {
   .animation-indicator {
-    height: calc(300vh - 160px);
+    height: 300vh;
   }
   .main-inner {
-    height: calc(300vh - 240px);
+    height: 300vh;
     & > div {
-      height: calc(100vh - 80px);
+      height: 100vh;
       &:nth-child(2) {
-        height: calc(200vh - 160px);
+        height: 200vh;
       }
     }
   }
@@ -1465,6 +1461,7 @@ form .select-value {
   }
 
   .main-svg {
+    margin-top: 80px;
     max-width: 1560px;
     // top: -44%;
     // top: -50%;

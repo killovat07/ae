@@ -173,47 +173,47 @@ if (document.querySelector('.wrapper').classList.contains('home-page')) {
   });
 
   var timeline = new TimelineMax();
-
-  var tween1 = TweenMax.to('.rect1', 1, {
-    // opacity: 0,
-    css: { className: '+=is-active' },
-    // filter: 'sepia(100%) hue-rotate(190deg) saturate(800%) contrast(90%) brightness(140%)'
-  });
-  var tween2 = TweenMax.to('.overlay-blue', 1, {
+  var tween1 = TweenMax.to('.overlay-blue', 2, {
     opacity: 1,
   });
-  var tween3 = TweenMax.to('#particles-js', 1, {
+  var tween2 = TweenMax.to('.main-svg', 2, {
+    css: { className: '+=is-active' },
+  });
+
+  var tween3 = TweenMax.to('#particles-js', 2, {
     opacity: 0,
   });
-  var tween5 = TweenMax.to('.offers-block', 1, {
+  var tween5 = TweenMax.to('.offers-block', 2, {
     top: '-50%',
     opacity: '0',
   });
 
-  var tween6 = TweenMax.to('text', 1, {
+  var tween6 = TweenMax.to('text', 2, {
     opacity: 1,
     animation: 'rotate 25s linear infinite',
   });
-  var tween7 = TweenMax.to('.main-svg', 1, {
+  var tween7 = TweenMax.to('.main-svg', 2, {
     width: '120%',
     maxWidth: '960px',
   });
-  var tween8 = TweenMax.to('.main-svg', 1, {});
-  var tween9 = TweenMax.to('.main-svg', 1, {
+  var tween8 = TweenMax.to('.main-svg', 2, {});
+  var tween9 = TweenMax.to('.main-svg', 2, {
     top: '0',
     opacity: '0',
   });
-  var tween10 = TweenMax.to('.main-svg', 1, {});
-  var tween11 = TweenMax.to('.content-block', 1, {
+  var tween10 = TweenMax.to('.main-svg', 2, {});
+  var tween11 = TweenMax.to('.content-block', 2, {
     opacity: 1,
     top: '0',
   });
 
-  var tween12 = TweenMax.to('.overlay-blue', 1, {
+  var tween12 = TweenMax.to('.overlay-blue', 2, {
     opacity: 0,
   });
-  var tween13 = TweenMax.to('.overlay-blue', 1, {});
-  var tween14 = TweenMax.to('.wrapper', 1, {
+  var tween13 = TweenMax.to('.overlay-blue', 2, {
+    opacity: 0,
+  });
+  var tween14 = TweenMax.to('.wrapper', 0.00001,{
     css: { className: '+=main-screen-end' },
   });
 
@@ -235,8 +235,8 @@ if (document.querySelector('.wrapper').classList.contains('home-page')) {
   scene.addTo(controller);
 
 
-  // new ScrollMagic.Scene({triggerElement: ".top-section",triggerHook: 0,offset:0})
-  // .setTween(TweenMax.to('.scroll-pagination', 0.5, {css: { className: '-=is-about-active' }})).addTo(controller);
+  // new ScrollMagic.Scene({triggerElement: ".circle-animate-inner",triggerHook: 1, duration: 0})
+  // .setTween(TweenMax.to('.wrapper', 0, {css: { className: '+=main-screen-end' }})).addTo(controller);
   
   new ScrollMagic.Scene({triggerElement: ".animation-indicator",triggerHook: 0,offset:500})
   .setTween(TweenMax.to('.scroll-pagination', 0.5, {css: { className: '+=is-about-active' }})).addTo(controller);
@@ -385,17 +385,17 @@ if (document.querySelector('.wrapper').classList.contains('home-page')) {
 /* Blue animation section */
  new ScrollMagic.Scene({
     triggerElement: '.animation-section',
-    duration: 1500,
+    duration: '300%',
     triggerHook: 0.4,
   }).setTween(TweenMax.to('.vector-1', 0.35, {transform: 'translateX(-100vw)'})).addTo(controller);
   new ScrollMagic.Scene({
     triggerElement: '.animation-section',
-    duration:1200,
+    duration:'200%',
     triggerHook: 0.4,
   }).setTween(TweenMax.to('.vector-2', 0.55, {transform: 'translateX(100vw)'})).addTo(controller);
   new ScrollMagic.Scene({
     triggerElement: '.animation-section',
-    duration: 800,
+    duration: '400%',
     triggerHook: 0.4,
   }).setTween(TweenMax.to('.vector-3', 0.75, {transform: 'translateX(-100vw)'})).addTo(controller);
   new ScrollMagic.Scene({
