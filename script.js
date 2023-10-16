@@ -210,9 +210,9 @@ if (document.querySelector('.wrapper').classList.contains('home-page')) {
   var tween13 = TweenMax.to('.overlay-blue', 2, {
     opacity: 0,
   });
-  // var tween14 = TweenMax.to('.wrapper', 0.00001,{
-  //   css: { className: '+=main-screen-end' },
-  // });
+  var tween14 = TweenMax.to('.wrapper', 0.00001,{
+    css: { className: '+=main-screen-end' },
+  });
 
   timeline
     .add(tween1)
@@ -226,8 +226,8 @@ if (document.querySelector('.wrapper').classList.contains('home-page')) {
     .add(tween10)
     .add(tween11)
     .add(tween12)
-    .add(tween13);
-   
+    .add(tween13)
+    .add(tween14);
   scene.setTween(timeline);
   scene.addTo(controller);
 

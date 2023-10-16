@@ -774,19 +774,19 @@ main {
 .is-animate .main-svg {
   width: 100vw;
 }
-.main-svg text {
-  fill: #fff;
-  font-family: 'Montserrat';
-  font-weight: 600;
-  font-size: 28px;
-}
 .main-svg tspan {
   fill: var(--primary);
 }
 .main-svg text {
+  fill: #fff;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 24px;
+  -webkit-animation: rotate 25s linear infinite;
+  animation: rotate 25s linear infinite;
+  -webkit-transform-origin: 250px 250px;
+  -ms-transform-origin: 250px 250px;
   transform-origin: 250px 250px;
-  opacity: 0;
-  will-change: transform;
   transition: var(--transition);
 }
 .main-svg rect {
@@ -802,11 +802,23 @@ main {
 .main-svg.is-active .rect2 {
   opacity: 1;
 }
-@keyframes rotate {
+@-webkit-keyframes rotate {
   from {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
