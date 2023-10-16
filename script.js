@@ -185,9 +185,9 @@ if (document.querySelector('.wrapper').classList.contains('home-page')) {
     opacity: '0',
   });
 
-  var tween6 = TweenMax.to('text', 2, {
-    opacity: 1,
-    animation: 'rotate 25s linear infinite',
+  var tween6 = TweenMax.to('.main-svg', 2, {
+    // opacity: 1,
+    // animation: 'rotate 25s linear infinite',
   });
   var tween7 = TweenMax.to('.main-svg', 2, {
     width: '120%',
