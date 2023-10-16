@@ -162,74 +162,74 @@ if (document.querySelector('.wrapper').classList.contains('home-page')) {
   //Init controller
   var controller = new ScrollMagic.Controller();
 
-  // var scene = new ScrollMagic.Scene({
-  //   triggerElement: '.animation-indicator',
-  //   triggerHook: 0,
-  //   duration: '200%',
-  //   offset: 0,
-  // });
+  var scene = new ScrollMagic.Scene({
+    triggerElement: '.animation-indicator',
+    triggerHook: 0,
+    duration: '200%',
+    offset: 0,
+  });
 
-  // var timeline = new TimelineMax();
-  // var tween1 = TweenMax.to('.overlay-blue', 2, {
-  //   opacity: 1,
-  // });
-  // var tween2 = TweenMax.to('.main-svg', 2, {
-  //   css: { className: '+=is-active' },
-  // });
+  var timeline = new TimelineMax();
+  var tween1 = TweenMax.to('.overlay-blue', 2, {
+    opacity: 1,
+  });
+  var tween2 = TweenMax.to('.main-svg', 2, {
+    css: { className: '+=is-active' },
+  });
 
-  // var tween3 = TweenMax.to('#particles-js', 2, {
-  //   opacity: 0,
-  // });
-  // var tween5 = TweenMax.to('.offers-block', 2, {
-  //   top: '-50%',
-  //   opacity: '0',
-  // });
+  var tween3 = TweenMax.to('#particles-js', 2, {
+    opacity: 0,
+  });
+  var tween5 = TweenMax.to('.offers-block', 2, {
+    top: '-50%',
+    opacity: '0',
+  });
 
-  // var tween6 = TweenMax.to('text', 2, {
-  //   opacity: 1,
-  //   animation: 'rotate 25s linear infinite',
-  // });
-  // var tween7 = TweenMax.to('.main-svg', 2, {
-  //   width: '120%',
-  //   maxWidth: '960px',
-  // });
-  // var tween8 = TweenMax.to('.main-svg', 2, {});
-  // var tween9 = TweenMax.to('.main-svg', 2, {
-  //   top: '0',
-  //   opacity: '0',
-  // });
-  // var tween10 = TweenMax.to('.main-svg', 2, {});
-  // var tween11 = TweenMax.to('.content-block', 2, {
-  //   opacity: 1,
-  //   top: '0',
-  // });
+  var tween6 = TweenMax.to('text', 2, {
+    opacity: 1,
+    animation: 'rotate 25s linear infinite',
+  });
+  var tween7 = TweenMax.to('.main-svg', 2, {
+    width: '120%',
+    maxWidth: '960px',
+  });
+  var tween8 = TweenMax.to('.main-svg', 2, {});
+  var tween9 = TweenMax.to('.main-svg', 2, {
+    top: '0',
+    opacity: '0',
+  });
+  var tween10 = TweenMax.to('.main-svg', 2, {});
+  var tween11 = TweenMax.to('.content-block', 2, {
+    opacity: 1,
+    top: '0',
+  });
 
-  // var tween12 = TweenMax.to('.overlay-blue', 2, {
-  //   opacity: 0,
-  // });
-  // var tween13 = TweenMax.to('.overlay-blue', 2, {
-  //   opacity: 0,
-  // });
+  var tween12 = TweenMax.to('.overlay-blue', 2, {
+    opacity: 0,
+  });
+  var tween13 = TweenMax.to('.overlay-blue', 2, {
+    opacity: 0,
+  });
   // var tween14 = TweenMax.to('.wrapper', 0.00001,{
   //   css: { className: '+=main-screen-end' },
   // });
 
-  // timeline
-  //   .add(tween1)
-  //   .add(tween2)
-  //   .add(tween3)
-  //   .add(tween5)
-  //   .add(tween6)
-  //   .add(tween7)
-  //   .add(tween8)
-  //   .add(tween9)
-  //   .add(tween10)
-  //   .add(tween11)
-  //   .add(tween12)
-  //   .add(tween13)
-  //   .add(tween14);
-  // scene.setTween(timeline);
-  // scene.addTo(controller);
+  timeline
+    .add(tween1)
+    .add(tween2)
+    .add(tween3)
+    .add(tween5)
+    .add(tween6)
+    .add(tween7)
+    .add(tween8)
+    .add(tween9)
+    .add(tween10)
+    .add(tween11)
+    .add(tween12)
+    .add(tween13);
+   
+  scene.setTween(timeline);
+  scene.addTo(controller);
 
 
   // new ScrollMagic.Scene({triggerElement: ".circle-animate-inner",triggerHook: 1, duration: 0})

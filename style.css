@@ -84,6 +84,9 @@ input {
   font-family: 'Montserrat', sans-serif;
 }
 .main-container {
+  position: sticky;
+  top: 0;
+  transition: var(--transition);
   overflow: hidden;
 }
 .main-screen-end .main-container {
