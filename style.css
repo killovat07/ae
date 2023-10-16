@@ -625,7 +625,7 @@ main {
 }
 .main-inner {
   justify-content: flex-start;
-  height: 300vh;
+  height: 2000px;
   display: flex;
   flex-direction: column;
   padding-bottom: 0;
@@ -639,7 +639,7 @@ main {
   position: relative;
 }
 .main-inner > div:nth-child(2) {
-  height: 200vh;
+  flex: 1;
 }
 .offers-block {
   position: absolute;
@@ -737,7 +737,7 @@ main {
 .animation-indicator {
   position: absolute;
   top: 0;
-  height: 300vh;
+  height: 3000px;
   margin: auto;
   left: 0;
   right: 0;
@@ -1221,7 +1221,7 @@ form .select-value {
 }
 @media screen and (min-width: 768px) {
   .animation-indicator {
-    height: 300vh;
+    height: 3000px;
   }
 }
 @media screen and (min-width: 684px) {
@@ -1231,10 +1231,10 @@ form .select-value {
 }
 @media screen and (min-width: 980px) {
   .animation-indicator {
-    height: 300vh;
+    height: 3000px;
   }
   .main-inner {
-    height: 300vh;
+    height: 3000px;
   }
   .main-inner > div {
     height: 100vh;
